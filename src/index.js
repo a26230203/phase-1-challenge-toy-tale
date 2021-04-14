@@ -30,8 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   //Create new toy list
   
   form.addEventListener('submit', (evt) => {
-    let inputName = evt.target.querySelector('input[name=name]').value
-    let inputImag = evt.target.querySelector('input[name=image]').value
+    let inputName = evt.target.name.value
+    let inputImag = evt.target.image.value
+    //let inputName = evt.target.querySelector('input[name=name]').value
+    //let inputImag = evt.target.querySelector('input[name=image]').value
     evt.preventDefault() 
     console.log("Hello")
     console.log(inputName)
