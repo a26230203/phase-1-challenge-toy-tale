@@ -68,12 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
       imgTag.src = toyCard.image
   
       let likeButton = document.createElement('button')
-      likeButton.innerText = 'like'
+      likeButton.innerText = 'like 3<'
       likeButton.id = toyCard.id
       likeButton.className = 'like-btn'
   
       let pTag = document.createElement('p')
-      pTag.innerText = toyCard.likes
+      pTag.innerText = `${toyCard.likes} Likes` 
   
       card.append(titles, imgTag, pTag, likeButton)
       collection.append(card)
@@ -88,13 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(response => response.json())
         .then(increaseLikes => {
-          pTag.innerText = increaseLikes.likes
+          pTag.innerText = `${increaseLikes.likes} Like`
           toyCard.likes = increaseLikes.likes
         })
       })
     }
-  
-
 });
 
 
